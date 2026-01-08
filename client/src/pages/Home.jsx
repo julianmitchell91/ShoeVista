@@ -13,7 +13,7 @@ const Home = () => {
         <div className="prose prose-2xl">
           <ShopBy title="Best Sellers" filter="bestSellers" />
         </div>
-        <div className="prose prose-2xl">
+        <div className="child:ring-white">
           <ShopBy title="Top Rated" filter="topRated" />
         </div>
       </div>
