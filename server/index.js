@@ -35,4 +35,7 @@ const startServer = async () => {
     process.exit(1);
   }
 };
+
+// routed connected
+app.use("/api", router);
 startServer();
