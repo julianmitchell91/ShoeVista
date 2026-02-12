@@ -3,7 +3,14 @@ import React, { useEffect, useState } from "react";
 import HorSlider from "./HorSlider";
 
 const ShopBy = ({ filter, title }) => {
-  const [products, setProducts] = useState([]);
+   const data = [
+    { src: "/GenInfo/adidas.jpg", name: "Adidas", to: "/search/adidas" },
+    { src: "/GenInfo/nike.png", name: "Nike", to: "/search/nike" },
+    { src: "/GenInfo/skechers.jpg", name: "Skechers", to: "/search/skechers" },
+    { src: "/GenInfo/puma.jpg", name: "Puma", to: "/search/puma" },
+  ];
+
+  const [products, setProducts] = useState(data);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -37,7 +44,7 @@ const ShopBy = ({ filter, title }) => {
       <div className="mt-10 mb-2 text-2xl">{title}</div>
       <div className="overflow-x-auto overflow-y-hidden md:max-w-full scroll-container mb-10 mx-auto relative scroll-container">
         {loading && <p>Loading...</p>}
-        {error && <p>Error while fetching: {error.message}</p>}
+        {/* {error && <p>Error while fetching: {error.message}</p>} */}
 
         <div className="flex flex-nowrap space-x-4">
           {/* Ensure products is always an array */}
