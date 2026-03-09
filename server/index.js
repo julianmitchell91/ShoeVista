@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import router from "./routes/productRoutes.js";
+import productRoutes from "./routes/productRoutes.js";
 
 dotenv.config();
 
@@ -23,6 +23,9 @@ const connectDB = async () => {
     process.exit(1);
   }
 };
+
+// all endpoints
+app.use('/api', productRoutes)
 
 const startServer = async () => {
   try {
